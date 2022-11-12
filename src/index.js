@@ -11,15 +11,13 @@ import {CookiesProvider} from 'react-cookie';
 function Router(){
 
   return (
-    <React.StrictMode>
+  <React.StrictMode>
       <CookiesProvider>
         <BrowserRouter>
           <Route exact path='/' component={Auth}/>
           <Route exact path='/movies' component={App}/>
         </BrowserRouter>
       </CookiesProvider>
-
-  
   </React.StrictMode>
   )
 }
