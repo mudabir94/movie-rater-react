@@ -1,18 +1,10 @@
-# Fetching the latest node image on apline linux
-FROM node:alpine AS development
+FROM node:16-alpine
 
-# Declaring env
-ENV NODE_ENV development
+WORKDIR /app
 
-# Setting up the work directory
-WORKDIR /react-app
-
-# Installing dependencies
-COPY ./package.json /react-app
+COPY package*.json /app
 RUN npm install
 
-# Copying all the files in our project
-COPY . .
+COPY . /app
 
-# Starting our application
-CMD npm start
+CMD ["npm", "start"]
