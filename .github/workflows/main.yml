@@ -1,9 +1,10 @@
-name: ci
+name: ci to docker hub
 
 on:
+  # Triggers the workflow on push with tag Version.
   push:
-    branches:
-      - "main"
+    tags:
+      - "v*.*.*"
 
 jobs:
   build:
