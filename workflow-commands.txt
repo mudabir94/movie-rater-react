@@ -1,0 +1,6 @@
+create react project 
+- npx create-react-app app_name
+start app 
+- npm start
+font icons
+- fontawesome
